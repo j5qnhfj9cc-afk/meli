@@ -1,7 +1,7 @@
 // =====================
 // 1) CONFIG
 // =====================
-const TZ = "America/Argentina/Mendoza";
+const TZ = "America/Chile/Santiago";
 
 const SCHEDULE = [
   { day: 1, start: "08:15", end: "09:35", course: "Finanzas Públicas" },
