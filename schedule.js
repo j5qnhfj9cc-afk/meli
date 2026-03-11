@@ -126,11 +126,10 @@ function renderSchedule(){
   for (const s of sorted){
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${dayName(s.day)}</td>
-      <td>${s.start}–${s.end}</td>
-      <td>${s.course}</td>
-      <td>${s.room || "-"}</td>
-    `;
+  <td>${dayName(s.day)}</td>
+  <td>${s.start}–${s.end}</td>
+  <td>${s.course}</td>
+`;
     tbody.appendChild(tr);
   }
 }
