@@ -3,48 +3,103 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mis horarios</title>
+  <title>Meli horarios</title>
 
   <style>
     :root{
-      --free-bg:#e6f7ee;
-      --free-border:#7fd4a6;
-      
-      --class-bg:#e6f0ff;
-      --class-border:#8fb3ff;
-      
-      --meeting-bg:#f1e6ff;
-      --meeting-border:#c49bff;
-    }
-    html[data-theme="dark"]{
-      --bg:#0b0f14; --text:#e8eef7; --muted:#a9b4c4; --card:#101826; --border:#243247; --thead:#0f1a2a; --code:#0f1a2a;
-      --in-bg:#0f2a1a; --in-border:#2f8f57;
-      --out-bg:#2a1b0f; --out-border:#b8742c;
+      --bg:#fff7fb;
+      --text:#4b2e3f;
+      --muted:#8a6d7f;
+      --card:#fff0f7;
+      --border:#efcfe0;
+      --thead:#fbe3ef;
+      --code:#fdebf4;
+
+      --free-bg:#f8ddea;
+      --free-border:#e9b7cd;
+
+      --class-bg:#f3cfe2;
+      --class-border:#dfa0c0;
     }
 
-    body{background:var(--bg); color:var(--text); font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial; margin:24px; line-height:1.35}
-    .card{max-width:920px; margin:auto; padding:18px; border:1px solid var(--border); background:var(--card); border-radius:14px}
-    .status{font-size:22px; font-weight:800; padding:12px 14px; border-radius:12px; margin:12px 0 10px}
-   .free{
-     background:var(--free-bg);
-     border:1px solid var(--free-border);
-   }
-    
+    html[data-theme="dark"]{
+      --bg:#140f1f;
+      --text:#f1e9ff;
+      --muted:#b9a8d1;
+      --card:#1d1630;
+      --border:#3a2d57;
+      --thead:#241b3a;
+      --code:#2a2042;
+
+      --free-bg:#2b2142;
+      --free-border:#6f5aa0;
+
+      --class-bg:#3a2556;
+      --class-border:#9a78d1;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      margin:24px;
+      line-height:1.35;
+    }
+
+    .card{
+      max-width:920px;
+      margin:auto;
+      padding:18px;
+      border:1px solid var(--border);
+      background:var(--card);
+      border-radius:14px;
+    }
+
+    .status{
+      font-size:22px;
+      font-weight:800;
+      padding:12px 14px;
+      border-radius:12px;
+      margin:12px 0 10px;
+      transition:background .2s ease, border-color .2s ease, color .2s ease;
+    }
+
+    .free{
+      background:var(--free-bg);
+      border:1px solid var(--free-border);
+    }
+
     .class{
       background:var(--class-bg);
       border:1px solid var(--class-border);
     }
 
-    .meeting{
-      background:var(--meeting-bg);
-      border:1px solid var(--meeting-border);
+    .small{
+      color:var(--muted);
+      font-size:13px;
     }
-    .small{color:var(--muted); font-size:13px}
-    code{background:var(--code); padding:2px 6px; border-radius:8px}
 
-    table{width:100%; border-collapse:collapse}
-    th,td{border-bottom:1px solid rgba(255,255,255,0.06); padding:10px 8px; text-align:left; vertical-align:top}
-    th{background:var(--thead)}
+    code{
+      background:var(--code);
+      padding:2px 6px;
+      border-radius:8px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    th,td{
+      border-bottom:1px solid var(--border);
+      padding:10px 8px;
+      text-align:left;
+      vertical-align:top;
+    }
+
+    th{
+      background:var(--thead);
+    }
 
     button{
       border:1px solid var(--border);
@@ -54,23 +109,74 @@
       border-radius:10px;
       cursor:pointer;
     }
-    button:hover{opacity:.9}
 
-    .grid{display:grid; gap:14px; grid-template-columns: 1fr}
-    @media (min-width: 860px){
-      .grid{grid-template-columns: 1fr 1fr}
+    button:hover{
+      opacity:.9;
     }
 
-    .panel{border:1px solid var(--border); border-radius:14px; padding:12px}
+    .grid{
+      display:grid;
+      gap:14px;
+      grid-template-columns:1fr;
+    }
 
-    /* Calendario mensual */
-    .cal-head{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px}
-    .cal-title{font-weight:800}
-    .cal{width:100%; border-collapse:collapse}
-    .cal th,.cal td{border:1px solid rgba(255,255,255,0.08); padding:8px; vertical-align:top}
-    .cal th{background:var(--thead); font-size:12px; color:var(--muted)}
-    .daynum{font-weight:700; font-size:12px; opacity:.85}
-    .chip{display:block; margin-top:6px; padding:6px 8px; border-radius:10px; border:1px solid var(--border); background:rgba(255,255,255,0.03); font-size:12px}
+    @media (min-width: 860px){
+      .grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    .panel{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px;
+      background:rgba(255,255,255,0.08);
+    }
+
+    .cal-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      margin-bottom:10px;
+    }
+
+    .cal-title{
+      font-weight:800;
+    }
+
+    .cal{
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    .cal th,.cal td{
+      border:1px solid var(--border);
+      padding:8px;
+      vertical-align:top;
+    }
+
+    .cal th{
+      background:var(--thead);
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .daynum{
+      font-weight:700;
+      font-size:12px;
+      opacity:.85;
+    }
+
+    .chip{
+      display:block;
+      margin-top:6px;
+      padding:6px 8px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,0.12);
+      font-size:12px;
+    }
   </style>
 </head>
 
@@ -81,34 +187,30 @@
       <button id="themeBtn" type="button">🌙 Oscuro</button>
     </div>
 
-    <!-- Estado (lo llena schedule.js) -->
-    <div id="status" class="status out">Cargando…</div>
+    <div id="status" class="status free">Cargando…</div>
 
     <div class="small" style="margin-bottom:10px;">
-      Zona horaria: <code>America/Argentina/Mendoza</code>
+      Zona horaria: <code>America/Chile/Santiago</code>
     </div>
 
-    <!-- 1) Horario semanal desplegable -->
     <details id="scheduleDetails" open class="panel">
       <summary style="cursor:pointer; font-weight:800; margin:6px 0;">1) Horario semanal</summary>
 
       <table id="table">
         <thead>
-          <tr><th>Día</th><th>Bloque</th><th>Materia</th><th>Ambiente</th></tr>
+          <tr><th>Día</th><th>Bloque</th><th>Ramo</th><th>Ambiente</th></tr>
         </thead>
         <tbody></tbody>
       </table>
     </details>
 
     <div class="grid" style="margin-top:14px;">
-      <!-- 2) Contador hasta el próximo parcial -->
       <div class="panel">
-        <div style="font-weight:800; margin-bottom:8px;">2) Próximo parcial</div>
+        <div style="font-weight:800; margin-bottom:8px;">2) Próximo control/pep</div>
         <div id="nextExam" style="font-size:18px; font-weight:800;">Cargando…</div>
         <div id="nextExamMeta" class="small"></div>
       </div>
 
-      <!-- 3) Calendario mensual -->
       <div class="panel">
         <div style="font-weight:800; margin-bottom:8px;">3) Calendario mensual</div>
 
@@ -128,12 +230,12 @@
         </table>
 
         <div class="small" style="margin-top:8px;">
-          Los parciales aparecen marcados. Puedes moverte entre meses con ◀ ▶.
+          Los controles/pep aparecen marcados. Puedes moverte entre meses con ◀ ▶.
         </div>
       </div>
     </div>
+  </div>
 
-  
   <script src="schedule.js"></script>
 </body>
 </html>
