@@ -3,39 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Meli horarios</title>
+  <title>Mis horarios</title>
 
   <style>
     :root{
-      --bg:#fff7fb;
-      --text:#4b2e3f;
-      --muted:#8a6d7f;
-      --card:#fff0f7;
-      --border:#efcfe0;
-      --thead:#fbe3ef;
-      --code:#fdebf4;
+      /* MODO CLARO: ROSA */
+      --bg:#fff1f8;
+      --text:#5a2943;
+      --muted:#946b83;
+      --card:#ffdfee;
+      --border:#f2bcd4;
+      --thead:#ffcfe4;
+      --code:#ffe7f2;
 
-      --free-bg:#f8ddea;
-      --free-border:#e9b7cd;
+      --free-bg:#ffd8ea;
+      --free-border:#f0a9ca;
 
-      --class-bg:#f3cfe2;
-      --class-border:#dfa0c0;
+      --class-bg:#ffbfdc;
+      --class-border:#e88ab6;
     }
 
     html[data-theme="dark"]{
-      --bg:#140f1f;
-      --text:#f1e9ff;
-      --muted:#b9a8d1;
-      --card:#1d1630;
-      --border:#3a2d57;
-      --thead:#241b3a;
-      --code:#2a2042;
+      /* MODO OSCURO: MORADO */
+      --bg:#140f1d;
+      --text:#f3eaff;
+      --muted:#bca9d6;
+      --card:#21172f;
+      --border:#4a3566;
+      --thead:#2a1d3d;
+      --code:#312247;
 
-      --free-bg:#2b2142;
-      --free-border:#6f5aa0;
+      --free-bg:#312347;
+      --free-border:#7d5aac;
 
-      --class-bg:#3a2556;
-      --class-border:#9a78d1;
+      --class-bg:#442b63;
+      --class-border:#a67ce0;
     }
 
     body{
@@ -190,7 +192,7 @@
     <div id="status" class="status free">Cargando…</div>
 
     <div class="small" style="margin-bottom:10px;">
-      Zona horaria: <code>America/Chile/Santiago</code>
+      Zona horaria: <code>America/Argentina/Mendoza</code>
     </div>
 
     <details id="scheduleDetails" open class="panel">
@@ -198,7 +200,7 @@
 
       <table id="table">
         <thead>
-          <tr><th>Día</th><th>Bloque</th><th>Ramo</th><th>Ambiente</th></tr>
+          <tr><th>Día</th><th>Bloque</th><th>Materia</th></tr>
         </thead>
         <tbody></tbody>
       </table>
@@ -206,7 +208,7 @@
 
     <div class="grid" style="margin-top:14px;">
       <div class="panel">
-        <div style="font-weight:800; margin-bottom:8px;">2) Próximo control/pep</div>
+        <div style="font-weight:800; margin-bottom:8px;">2) Próximo parcial</div>
         <div id="nextExam" style="font-size:18px; font-weight:800;">Cargando…</div>
         <div id="nextExamMeta" class="small"></div>
       </div>
@@ -230,7 +232,7 @@
         </table>
 
         <div class="small" style="margin-top:8px;">
-          Los controles/pep aparecen marcados. Puedes moverte entre meses con ◀ ▶.
+          Los parciales aparecen marcados. Puedes moverte entre meses con ◀ ▶.
         </div>
       </div>
     </div>
