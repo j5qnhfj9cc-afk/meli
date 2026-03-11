@@ -88,20 +88,35 @@
     }
 
     table{
-      width:100%;
-      border-collapse:collapse;
-    }
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
 
-    th,td{
-      border-bottom:1px solid var(--border);
-      padding:10px 8px;
-      text-align:left;
-      vertical-align:top;
-    }
+th,td{
+  border-bottom:1px solid var(--border);
+  padding:10px 12px;
+  text-align:left;
+  vertical-align:top;
+}
+
+th:nth-child(1), td:nth-child(1){
+  width:22%;
+}
+
+th:nth-child(2), td:nth-child(2){
+  width:28%;
+}
+
+th:nth-child(3), td:nth-child(3){
+  width:50%;
+}
 
     th{
-      background:var(--thead);
-    }
+  background:var(--thead);
+  font-weight:700;
+  letter-spacing:.2px;
+}
 
     button{
       border:1px solid var(--border);
