@@ -5,17 +5,17 @@ const TZ = "America/Argentina/Mendoza";
 
 // TU HORARIO (mantén HH:MM con 0 a la izquierda)
 const SCHEDULE = [
-  { day: 1, start: "08:15", end: "09:35", course: "Finanzas Publicas", room: "Ambiente 1" },
-  { day: 1, start: "09:50", end: "11:10", course: "Inglés V", room: "Ambiente 1" },
-  { day: 1, start: "11:25", end: "12:45", course: "Evaluación de proyectos", room: "Ambiente 1" },
-  { day: 1, start: "13:45", end: "16:40", course: "Control de gestión", room: "Ambiente 1"},
-  { day: 2, start: "13:45", end: "16:40", course: "Evaluación de proyectos", room: "Ambiente 1"},
-  { day: 3, start: "08:15", end: "09:35", course: "Finanzas Publicas", room: "Ambiente 1" },
-  { day: 3, start: "09:50", end: "11:10", course: "Inglés V", room: "Ambiente 1" },
-  { day: 3, start: "13:45", end: "16:40", course: "Gestión de personas", room: "Ambiente 1" },
-  { day: 4, start: "13:45", end: "15:05", course: "Control de Gestión", room: "Ambiente 1" },
-  { day: 5, start: "08:15", end: "09:35", course: "Finanzas públicas", room: "Ambiente 1" },
-  { day: 5, start: "09:50", end: "12:45", course: "Técnicas de la investigación I", room: "Ambiente 1" },
+  { day: 1, start: "08:15", end: "09:35", course: "Finanzas Publicas"},
+  { day: 1, start: "09:50", end: "11:10", course: "Inglés V"},
+  { day: 1, start: "11:25", end: "12:45", course: "Evaluación de proyectos"},
+  { day: 1, start: "13:45", end: "16:40", course: "Control de gestión"},
+  { day: 2, start: "13:45", end: "16:40", course: "Evaluación de proyectos"},
+  { day: 3, start: "08:15", end: "09:35", course: "Finanzas Publicas"},
+  { day: 3, start: "09:50", end: "11:10", course: "Inglés V"},
+  { day: 3, start: "13:45", end: "16:40", course: "Gestión de personas"},
+  { day: 4, start: "13:45", end: "15:05", course: "Control de Gestión"},
+  { day: 5, start: "08:15", end: "09:35", course: "Finanzas públicas"},
+  { day: 5, start: "09:50", end: "12:45", course: "Técnicas de la investigación I"},
 ];
 
 
