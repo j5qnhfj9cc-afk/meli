@@ -5,23 +5,20 @@ const TZ = "America/Argentina/Mendoza";
 
 // TU HORARIO (mantén HH:MM con 0 a la izquierda)
 const SCHEDULE = [
-  { day: 1, start: "08:00", end: "10:00", course: "Ingles", room: "Ambiente 1" },
-  { day: 1, start: "10:30", end: "12:45", course: "Comunicación de datos", room: "Ambiente 1" },
-  { day: 2, start: "08:00", end: "10:15", course: "Economía", room: "Ambiente 1"},
-  { day: 2, start: "16:00", end: "19:00", course: "Bases de datos", room: "Ambiente 1"},
-  { day: 3, start: "08:00", end: "12:45", course: "Diseño de sistemas de información", room: "Ambiente 1" },
-  { day: 3, start: "16:00", end: "19:00", course: "Desarrollo de software", room: "Ambiente 1" },
-  { day: 4, start: "08:00", end: "11:15", course: "Análisis numérico", room: "Ambiente 1" },
-  { day: 5, start: "08:00", end: "10:00", course: "Ingles", room: "Ambiente 1" },
-  { day: 5, start: "10:30", end: "12:45", course: "Economía", room: "Ambiente 1" },
+  { day: 1, start: "08:15", end: "09:35", course: "Finanzas Publicas", room: "Ambiente 1" },
+  { day: 1, start: "09:50", end: "11:10", course: "Inglés V", room: "Ambiente 1" },
+  { day: 1, start: "11:25", end: "12:45", course: "Evaluación de proyectos", room: "Ambiente 1" },
+  { day: 1, start: "13:45", end: "16:40", course: "Control de gestión", room: "Ambiente 1"},
+  { day: 2, start: "13:45", end: "16:40", course: "Evaluación de proyectos", room: "Ambiente 1"},
+  { day: 3, start: "08:15", end: "09:35", course: "Finanzas Publicas", room: "Ambiente 1" },
+  { day: 3, start: "09:50", end: "11:10", course: "Inglés V", room: "Ambiente 1" },
+  { day: 3, start: "13:45", end: "16:40", course: "Gestión de personas", room: "Ambiente 1" },
+  { day: 4, start: "13:45", end: "15:05", course: "Control de Gestión", room: "Ambiente 1" },
+  { day: 5, start: "08:15", end: "09:35", course: "Finanzas públicas", room: "Ambiente 1" },
+  { day: 5, start: "09:50", end: "12:45", course: "Técnicas de la investigación I", room: "Ambiente 1" },
 ];
 
-// ✅ REUNIONES (mantén HH:MM con 0 a la izquierda)
-const MEETINGS = [
-  // Ejemplos (edita)
-  { day: 2, start: "20:30", end: "22:15", title: "Reunión", place: "Salón" },
-  { day: 0, start: "09:30", end: "11:15", title: "Reunión", place: "Salón" },
-];
+
 
 // ✅ Fuente de parciales (JSON) desde tu Worker (URL completa con https)
 const EXAMS_URL = "https://horarios-elu.cgyrqz7mnn.workers.dev/";
