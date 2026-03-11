@@ -17,7 +17,7 @@ const SCHEDULE = [
   { day: 5, start: "09:50", end: "12:45", course: "Técnicas de la investigación I" },
 ];
 
-const EXAMS_URL = "https://horarios-elu.cgyrqz7mnn.workers.dev/";
+const EXAMS_URL = "https://horarios-meli.cgyrqz7mnn.workers.dev/";
 
 const EXAMS_FALLBACK = [
   // { date: "2026-03-12", title: "Parcial Finanzas Públicas", note: "" },
